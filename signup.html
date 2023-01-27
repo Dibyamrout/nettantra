@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopsyCart Signup</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<style>
+    body {
+        background-color: rgb(244, 244, 247);
+    }
+    
+    .center {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        background-color: rgb(55, 25, 226);
+        width: 700px;
+        height: 450px;
+        border-radius: 10px;
+    }
+    
+    .center .header i {
+        position: absolute;
+        top: 5%;
+        left: 650px;
+    }
+    
+    .center .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 70px;
+    }
+    
+    .center form {
+        position: absolute;
+        left: 100px;
+    }
+    
+    .center .txt_field i {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        padding-left: 9px;
+        transform: translateY();
+    }
+    
+    .center .pass_field i {
+        position: absolute;
+        top: 92px;
+        left: 0;
+        padding-left: 9px;
+        transform: translateY();
+    }
+    
+    .center .pass_field .pwslash {
+        position: absolute;
+        top: 93px;
+        left: 250px;
+    }
+    
+    .center .cpass_field i {
+        position: absolute;
+        top: 152px;
+        left: 0;
+        padding-left: 9px;
+        transform: translateY();
+    }
+    
+    .center .cpass_field .pwslash {
+        position: absolute;
+        top: 155px;
+        left: 250px;
+    }
+    
+    .center form label {
+        font-weight: 700;
+    }
+    
+    .center .txt_field input {
+        border-radius: 15px;
+        border: none;
+        border-color: rgb(170, 170, 247);
+        width: 250px;
+        padding-left: 33px;
+        outline: none;
+        margin-top: 7px;
+        margin-bottom: 10px;
+        height: 25px;
+    }
+    
+    .center .pass_field input {
+        border-radius: 15px;
+        border: none;
+        border-color: rgb(170, 170, 247);
+        width: 250px;
+        padding-left: 33px;
+        outline: none;
+        height: 25px;
+        margin-top: 7px;
+        margin-bottom: 10px;
+    }
+    
+    .center .cpass_field input {
+        border-radius: 15px;
+        border: none;
+        border-color: rgb(170, 170, 247);
+        width: 250px;
+        padding-left: 33px;
+        outline: none;
+        height: 25px;
+        margin-top: 7px;
+        margin-bottom: 10px;
+    }
+    
+    .center .submit input {
+        border-radius: 15px;
+        border: none;
+        width: 140px;
+        height: 28px;
+        font-weight: 510;
+        border-color: rgb(170, 170, 247);
+        color: rgb(38, 38, 190);
+        margin: 10px;
+        transform: scale(1.2);
+        cursor: pointer;
+        position: absolute;
+        left: 36px;
+    }
+    
+    .center .link a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .center .link {
+        position: absolute;
+        top: 270px;
+        left: 36px;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div class="header">
+            <i onclick="return closeWindow();" class="uil uil-times"></i>
+            <h1>REGISTER HERE</h1>
+        </div>
+        <form action="" method="post">
+            <div class="txt_field">
+                <label> Enter Email/Mobile Number</label><br>
+                <i class="uil uil-envelope icon"></i>
+                <input type="text" required name="user">
+            </div>
+            <div class="pass_field">
+                <label>Enter Password</label><br>
+                <i class="uil uil-lock"></i>
+                <input type="password" class="password" required name="pass">
+                <i class="uil uil-eye-slash pwslash"></i>
+
+            </div>
+            <div class="cpass_field">
+                <label>Confirm Password</label><br>
+                <i class="uil uil-lock"></i>
+                <input type="password" class="password" required>
+                <i class="uil uil-eye-slash pwslash"></i>
+            </div><br>
+            <div class="submit">
+                <input type="submit">
+            </div>
+            <div class="link">
+                Already Have Account ?<a href="index.html"> Login</a>
+            </div>
+
+    </div>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

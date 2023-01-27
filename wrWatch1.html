@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastrack Analog Watch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<style>
+    body {
+        background-color: rgb(218, 215, 215);
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        background: rgb(23, 105, 228);
+    }
+    
+    .header-area {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 100;
+        background: rgba(250, 250, 250, 0.1);
+        transition: all .5s ease 0s;
+    }
+    
+    .header-area {
+        background: transparent;
+        overflow: hidden;
+    }
+    
+    .logo {
+        font-size: 30px;
+        font-weight: 800;
+        text-align: left;
+    }
+    
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    em {
+        color: rgb(216, 213, 24);
+    }
+    
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 22px;
+    }
+    
+    .header-area .main form input {
+        padding: 10px 10px;
+        margin: 10px;
+        width: 500px;
+    }
+    
+    .header-area .main form button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .header-area .main form button {
+        position: absolute;
+        top: 32px;
+        left: 765px;
+    }
+    
+    .header-area .main form button i {
+        color: #4BA3EF;
+        font-size: 20px;
+    }
+    
+    .header-area .main .main-nav .login a {
+        text-decoration: none;
+        color: #4BA3EF;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .header-area .main .main-nav .login {
+        width: 100px;
+        height: 36px;
+    }
+    
+    .center {
+        position: absolute;
+        top: 86px;
+        left: 500px;
+        width: 1000px;
+        height: 1500px;
+        background-color: white;
+    }
+    
+    .center .link {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        color: rgb(128, 125, 125);
+        font-size: 14px;
+    }
+    
+    .center .link a {
+        text-decoration: none;
+        color: rgb(128, 125, 125);
+        background: transparent;
+    }
+    
+    .center .details {
+        position: absolute;
+        top: 50px;
+        left: 30px;
+        width: 850px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    .center .details span {
+        color: rgb(128, 125, 125);
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .center .details .title em {
+        color: rgb(24, 182, 24);
+        font-weight: bold;
+        position: absolute;
+        top: 53px;
+    }
+    
+    .center .details .rate {
+        position: absolute;
+        top: 85px;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    
+    .center .details .rate span {
+        text-decoration: line-through;
+        font-weight: 530;
+    }
+    
+    .center .details .rate em {
+        color: rgb(24, 182, 24);
+        font-size: 17px;
+    }
+    
+    .center .details .ratings {
+        position: absolute;
+        top: 130px;
+    }
+    
+    .center .details .ratings button {
+        width: 55px;
+        height: 25px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color: rgb(10, 167, 10);
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .center .details .ratings span a {
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(128, 125, 125);
+    }
+    
+    .center .details .offers {
+        position: absolute;
+        top: 150px;
+        font-size: 15px;
+    }
+    
+    .center .details .offers i {
+        color: rgb(10, 167, 10);
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .center .details .offers h4 {
+        font-size: 20px;
+    }
+    
+    .center .details .offers span {
+        color: black;
+        font-size: 18px;
+    }
+    
+    .center .details .offers .offer_lst a {
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bold;
+        color: #126cbb;
+    }
+    
+    .center .details .marker {
+        position: absolute;
+        top: 410px;
+        left: 30px;
+        color: rgb(128, 125, 125);
+    }
+    
+    .center .details .marker i {
+        font-size: 25px;
+        color: #126cbb;
+        position: absolute;
+        top: -2px;
+        left: -30px;
+    }
+    
+    .center .details .pin {
+        position: absolute;
+        top: 440px;
+    }
+    
+    .center .details .pin input {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: #126cbb;
+    }
+    
+    .center .details .pin button {
+        border: none;
+        cursor: pointer;
+    }
+    
+    .center .details .service {
+        position: absolute;
+        top: 440px;
+        right: 100px;
+        color: rgb(128, 125, 125);
+    }
+    
+    .center .details .service ul {
+        color: black;
+    }
+    
+    .pro_img {
+        width: 500px;
+        height: 610px;
+        position: fixed;
+        top: 86px;
+        left: 4px;
+        background-color: white;
+    }
+    
+    .pro_img .small_img img {
+        height: 60px;
+        position: relative;
+        left: 30px;
+        margin: 5px 0px;
+        cursor: pointer;
+        outline: 1px solid rgb(253, 253, 253);
+    }
+    
+    .pro_img .small_img img:hover {
+        outline: 2px solid #126cbb;
+        transition: .1s;
+    }
+    
+    .pro_img .main_img img {
+        position: absolute;
+        top: 50px;
+        left: 215px;
+        height: 380px;
+        width: 150px;
+    }
+    
+    .pro_img .cart .add {
+        position: absolute;
+        left: 40px;
+        top: 500px;
+    }
+    
+    .pro_img .cart .add button {
+        padding: 18px 54px;
+        color: white;
+        background-color: rgb(251, 255, 6);
+        border: none;
+        cursor: pointer;
+    }
+    
+    .pro_img .cart .buy {
+        position: absolute;
+        left: 270px;
+        top: 500px;
+    }
+    
+    .pro_img .cart .buy button {
+        padding: 17px 70px;
+        color: white;
+        background-color: rgb(255, 153, 0);
+        border: none;
+        cursor: pointer;
+    }
+    
+    .center .details .del-time {
+        position: absolute;
+        top: 506px;
+    }
+    
+    .center .details .del-time span {
+        color: rgb(10, 167, 10);
+    }
+    
+    .center .details .del-time em {
+        color: rgb(128, 125, 125);
+        text-decoration: line-through;
+        font-size: bold;
+    }
+    
+    .center .details .del-time a {
+        text-decoration: none;
+        color: #126cbF;
+    }
+    
+    .center .details .pro_details {
+        position: absolute;
+        top: 600px;
+        width: 500px;
+    }
+    
+    .center .details .pro_details span {
+        color: black;
+        font-size: 15px;
+        font-weight: 100;
+        position: absolute;
+        left: 300px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .center .details .pro_details em {
+        color: rgb(128, 125, 125);
+    }
+    
+    .center .details .review {
+        position: absolute;
+        top: 1060px;
+        width: 1000px;
+    }
+    
+    .center .details .review button {
+        width: 55px;
+        height: 25px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color: rgb(10, 167, 10);
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        position: absolute;
+        left: 255px;
+        top: 19px;
+    }
+    
+    .center .details .review span {
+        position: absolute;
+        left: 330px;
+        top: 19px;
+    }
+    
+    .center .details .review a button {
+        position: absolute;
+        top: 10px;
+        left: 650px;
+        background-color: rgb(23, 105, 228);
+        width: 130px;
+        height: 39px;
+        border-radius: 0%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        cursor: pointer;
+    }
+    
+    .pro_details i {
+        position: absolute;
+        left: 600px;
+        top: 8px;
+        font-size: 29px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    #show {
+        width: 500px;
+        height: 500px;
+        display: none;
+    }
+</style>
+
+<body>
+    <header class="header-area">
+        <div class="main">
+            <nav class="main-nav">
+                <div>
+                    <h2 class="logo"><a href="#">SHOPSY
+                        <em>CART</em></a></h2>
+                </div>
+                <form>
+                    <input type="text" placeholder="Search for products,brands and more">
+                    <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar">
+                    <li><a href="#">Become a Seller</a></li>
+                    <li><a href="#"><i class="bi bi-heart-fill"></i></a></li>
+                    <li><a href="Cart.html"><i class="bi bi-cart-fill"></i></a></li>
+                </ul>
+
+                <button class="login" type="button"><a href="/index.html">Login</a></button>
+        </div>
+        </nav>
+    </header>
+    <div class="center">
+        <div class="link">
+            <a href="home.html">Home</a> >
+            <a href="watch.html">Watches</a> > <a href="watch.html">Wrist Watches</a> > Fastrack Analo..
+        </div>
+        <div class="details">
+            <div class="title">
+                <span>Fastrack</span><br> Analog Watch For Men & Women<br><em>Special price</em>
+            </div>
+            <div class="rate">₹787 <span>  ₹890</span><em> 10% off</em></div>
+            <div class="ratings"><a href="#"><button type="button">4.3 <i class="bi bi-star-fill"></i></button></a>
+                <span><a href="#">74,541 ratings and 6,914 reviews</a></span>
+            </div>
+            <div class="offers">
+                <h4>Available offers</h4>
+                <div class="offer_lst"><i class="uil uil-pricetag-alt"></i><span>Special price</span> Get extra 10% off (price inclusive of cashback/coupon)<a href="#">T&C</a>
+                    <br><i class="uil uil-pricetag-alt"></i><span>Bank offer</span> 10% off on Federal Bank Debit and Credit Card, up to ₹1,250. On orders of ₹5,000 and above<a href="#">T&C</a><br>
+                    <i class="uil uil-pricetag-alt"></i><span>Bank offer</span> 10% off on HSBC Credit Card and EMI Transactions, up to ₹1,250. On orders of ₹5,000 and above<a href="#">T&C</a><br>
+                    <a href="#">+3 more offers</a></div><br><br>
+                <div class="warratny">Warranty <span>6 month</span></div>
+            </div>
+            <div class="marker">
+                <a href="#"> <i class="bi bi-geo-alt"></i></a> Deliver to
+            </div>
+            <div class="pin">
+                <input type="text" placeholder="Enter delivery pincode">
+                <button type="button">Check</button>
+            </div>
+            <div class="service">Services
+                <ul>
+                    <li>Cash on Delivery available ?</li>
+                    <li>10 Days return Policy ?</li>
+                    <li>GST invoice available ?</li>
+                </ul>
+            </div>
+            <div class="del-time">
+                Delivery by 5 feb , Thursday |<span>Free</span><em>₹40</em><br> if ordered before 10.23 PM<br><br>
+                <a href="#">View Details</a>
+            </div>
+            <div class="pro_details">
+                <h3>Product Details</h3>
+                <i class="bi bi-plus-lg" onclick="show(this)"></i>
+                <div id="show">
+                    <em>Water Resistant</em><span>Yes</span><br><br>
+                    <em>Display Type</em><span>Analog</span><br><br>
+                    <em>Style Code</em><span>9915PP58</span><br><br>
+                    <em>Occasion</em><span>Casual</span><br><br>
+                    <em>Watch Type</em><span>Wrist Watch</span><br><br>
+                    <em>Pack of</em><span>1</span><br><br>
+                    <em>Water Resistance Depth</em><span>30</span><br><br>
+                    <em>Clasp type</em><span>SS Buckle</span><br><br>
+                    <em>Width</em><span>49mm</span><br><br>
+                    <em>Warranty Period</em><span>6 Months</span>
+                </div>
+            </div>
+            <div class="review">
+                <h3>Ratings & Reviews</h3>
+                <button type="button">4.3 <i class="bi bi-star-fill"></i></button>
+                <span>74,541 ratings and 6,914 reviews</span>
+                <a href="#"><button type="button">Rate Product</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="pro_img">
+        <div class="small_img">
+            <img src="images/w1_1.webp" id="halfImg" onclick="myfunction(this)" alt="click here"><br>
+            <img src="images/w1-2.webp" id="halfImg" onclick="myfunction(this)" alt="click here"><br>
+            <img src="images/w1-6.webp" id="halfImg" onclick="myfunction(this)" alt="click here"><br>
+            <img src="images/w1-4.webp" id="halfImg" onclick="myfunction(this)" alt="click here"><br>
+            <img src="images/w1-5.webp" id="halfImg" onclick="myfunction(this)" alt="click here"><br>
+            <img src="images/w1-3.webp" id="halfImg" onclick="myfunction(this)" alt="click here">
+        </div>
+        <div class="main_img">
+            <img src="images/w1_1.webp" id="fullImage" alt="">
+        </div>
+        <div class="cart">
+            <div class="add">
+                <a href="#"><button type="button" onclick="add()" id="add"><i class="bi bi-cart-fill"></i>   ADD TO CART</button></a>
+            </div>
+            <div class="buy">
+                <a href="#"><button type="button">BUY NOW</button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myfunction(SmallImg) {
+            var FullImg = document.getElementById("fullImage");
+
+            FullImg.src = SmallImg.src;
+        }
+        let add = () => {
+            document.getElementById("add").innerHTML = "<b> Go to cart </b>";
+
+        }
+        let show = (x) => {
+            var y = document.getElementById('show');
+            if (y.style.display === 'none') {
+                x.classList.replace("bi-plus-lg", "bi-dash-lg")
+                y.style.display = 'block';
+            } else {
+                y.style.display = 'none';
+                x.classList.replace("bi-dash-lg", "bi-plus-lg")
+            }
+
+        }
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

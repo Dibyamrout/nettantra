@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ShopsyCart login</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<style>
+    body {
+        background-color: rgb(244, 244, 247);
+    }
+    
+    .center {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        background-color: white;
+        width: 470px;
+        height: 400px;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .center .header i {
+        position: absolute;
+        top: 5%;
+        left: 420px;
+    }
+    
+    .center .header {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    
+    .center h1 {
+        margin-bottom: 5px;
+    }
+    
+    .center form {
+        box-sizing: border-box;
+    }
+    
+    .center .txt_field {
+        position: absolute;
+        left: 80px;
+        top: 130px;
+    }
+    
+    .center i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding-left: 6px;
+        transform: translateY();
+    }
+    
+    .center .pwslash {
+        position: absolute;
+        left: 300px;
+    }
+    
+    .center .pass_field {
+        position: absolute;
+        left: 80px;
+        top: 190px;
+    }
+    
+    .center .txt_field input {
+        border-radius: 10px;
+        padding: 3px 30px;
+        width: 270px;
+        height: 25px;
+        border-color: rgb(170, 170, 247);
+        border-width: 1px;
+        outline: none;
+    }
+    
+    .center .pass_field input {
+        border-radius: 10px;
+        padding: 5px 30px;
+        width: 270px;
+        height: 25px;
+        border-color: rgb(170, 170, 247);
+        border-width: 1px;
+        outline: none;
+    }
+    
+    .center .submit {
+        text-align: center;
+    }
+    
+    .center .submit a {
+        text-decoration: none;
+        color: blue;
+    }
+    
+    .center .submit input {
+        border-radius: 15px;
+        background: blue;
+        position: absolute;
+        left: 70px;
+        border: none;
+        width: 130px;
+        height: 28px;
+        color: white;
+        margin: 10px;
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: .3s;
+    }
+    
+    .center .submit button {
+        border-radius: 15px;
+        border-color: rgb(170, 170, 247);
+        border-width: 1px;
+        position: absolute;
+        left: 260px;
+        top: 283px;
+        width: 130px;
+        height: 28px;
+        color: rgb(38, 38, 190);
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: .3s;
+    }
+    
+    .center .text {
+        position: absolute;
+        bottom: 15px;
+        left: 50px;
+        font-weight: 0;
+        font-size: 15px;
+    }
+    
+    .center form label {
+        font-weight: 700;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 20%;
+        left: 215px;
+        background-color: rgb(55, 25, 226);
+        width: 470px;
+        height: 400px;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        text-align: center;
+    }
+    
+    em {
+        color: yellow;
+    }
+    
+    .logo h1 {
+        position: absolute;
+        top: 140px;
+        left: 120px;
+        color: white;
+    }
+    
+    .logo h4 {
+        position: absolute;
+        top: 190px;
+        left: 150px;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="logo">
+        <h1>SHOPSYCART</h1>
+        <h4>Ab har <em>wish</em> hogi <em>poori</em></h4>
+    </div>
+    <div class="center">
+        <div class="header">
+            <i onclick="return closeWindow();" class="uil uil-times"></i>
+            <h1>Login</h1>
+            Get access to your Orders,Wishlist and Recommendations
+        </div>
+        <form action="" method="post">
+            <div class="txt_field" name="user">
+                <label> Enter Email/Mobile Number</label><br>
+                <i class="uil uil-envelope icon"></i>
+                <input type="text" required placeholder="+91">
+
+            </div><br>
+            <div class="pass_field" name="pass">
+                <label>Enter Password</label><br>
+                <i class="uil uil-lock"></i>
+                <input type="password" class="password" required placeholder="********">
+                <i class="uil uil-eye-slash pwslash"></i>
+            </div><br><br><br>
+            <div class="submit">
+                <a href="#">Forgot password ?</a><br>
+                <input type="submit">
+                <a href="signup.html"><button type="button">Sign Up</button></a>
+            </div>
+        </form>
+        <div class="text">
+            We no longer login via Social accounts.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

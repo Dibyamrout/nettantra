@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopsyCart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<style>
+    body {
+        background-color: rgb(218, 215, 215);
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        background: rgb(23, 105, 228);
+    }
+    
+    .header-area {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 100;
+        background: rgba(250, 250, 250, 0.1);
+        transition: all .5s ease 0s;
+    }
+    
+    .header-area {
+        background: transparent;
+        overflow: hidden;
+    }
+    
+    .logo {
+        font-size: 30px;
+        font-weight: 800;
+        text-align: left;
+    }
+    
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    em {
+        color: rgb(216, 213, 24);
+    }
+    
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 22px;
+    }
+    
+    .header-area .main form input {
+        padding: 10px 10px;
+        margin: 10px;
+        width: 500px;
+    }
+    
+    .header-area .main form button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .header-area .main form button {
+        position: absolute;
+        top: 32px;
+        left: 765px;
+    }
+    
+    .header-area .main form button i {
+        color: #4BA3EF;
+        font-size: 20px;
+    }
+    
+    .header-area .main .main-nav .login a {
+        text-decoration: none;
+        color: #4BA3EF;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .header-area .main .main-nav .login {
+        width: 100px;
+        height: 36px;
+    }
+    
+    .banner {
+        position: absolute;
+        left: 0px;
+        top: 85px;
+        width: 1500px;
+        height: 160px;
+        background-color: white;
+    }
+    
+    .banner .pro_list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .banner .pro_list a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .banner .pro_list a:hover {
+        color: rgb(23, 105, 228);
+        transition: .3s;
+    }
+    
+    .banner .pro_list .watches a img {
+        display: block;
+        height: 80px;
+    }
+    
+    .banner .pro_list .watches {
+        position: absolute;
+        top: 38px;
+        left: 455px;
+    }
+    
+    .banner .pro_list .electronics {
+        position: absolute;
+        left: 590px;
+    }
+    
+    .banner .pro_list .home {
+        position: absolute;
+        left: 750px;
+    }
+    
+    .banner .pro_list .appliances {
+        position: absolute;
+        left: 900px;
+    }
+    
+    .banner .pro_list .toys {
+        position: absolute;
+        left: 1050px;
+    }
+    
+    .banner .pro_list .travel {
+        position: absolute;
+        left: 1200px;
+    }
+    
+    .wallpaper img {
+        height: 1800px;
+        width: 200px;
+    }
+</style>
+
+<body>
+    <header class="header-area">
+        <div class="main">
+            <nav class="main-nav">
+                <div>
+                    <h2 class="logo"><a href="#">SHOPSY
+                        <em>CART</em></a></h2>
+                </div>
+                <form>
+                    <input type="text" placeholder="Search for products,brands and more">
+                    <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar">
+                    <li><a href="#">Become a Seller</a></li>
+                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                    <li><a href="#"><i class="bi bi-cart-fill"></i></a></li>
+                </ul>
+
+                <button class="login" type="button"><a href="/index.html">Login</a></button>
+        </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="pro_list">
+            <div class="grocery">
+                <a href="#"> <img src="images/grocery.webp" alt="Grocery"><br> Grocery</a>
+            </div>
+            <div class="mobiles">
+                <a href="#"> <img src="images/mobiles.webp" alt="Grocery"><br> Mobiles</a>
+            </div>
+
+            <div class="fashion">
+                <a href="#"> <img src="images/fashion.webp" alt="Grocery"><br> Fashions</a>
+            </div>
+
+            <div class="watches">
+                <a href="watch.html"> <img src="images/watches.webp" alt="Grocery"><br> Watches</a>
+
+            </div>
+            <div class="electronics ">
+                <a href="# "> <img src="images/electronics.webp " alt="Grocery "><br> Electronics</a>
+            </div>
+            <div class="home ">
+                <a href="# "> <img src="images/home.webp " alt="Grocery "><br> Home</a>
+            </div>
+
+
+            <div class="appliances ">
+                <a href="# "> <img src="images/appliances.webp " alt="Grocery "><br> Appliances</a>
+            </div>
+
+
+            <div class="toys ">
+                <a href="# "> <img src="images/toys&mores.webp " alt="Grocery "><br> Toys & Mores</a>
+            </div>
+            <div class="travel">
+                <a href=" # "> <img src="images/travel.webp " alt="Grocery "><br> Travel</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<style>
+    body {
+        background-color: rgb(218, 215, 215);
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        background: rgb(23, 105, 228);
+    }
+    
+    .header-area {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 100;
+        background: rgba(250, 250, 250, 0.1);
+        transition: all .5s ease 0s;
+    }
+    
+    .header-area {
+        background: transparent;
+        overflow: hidden;
+    }
+    
+    .logo {
+        font-size: 30px;
+        font-weight: 800;
+        text-align: left;
+    }
+    
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    em {
+        color: rgb(216, 213, 24);
+    }
+    
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 22px;
+    }
+    
+    .header-area .main form input {
+        padding: 10px 10px;
+        margin: 10px;
+        width: 500px;
+    }
+    
+    .header-area .main form button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    .header-area .main form button {
+        position: absolute;
+        top: 32px;
+        left: 855px;
+    }
+    
+    .header-area .main form button i {
+        color: #4BA3EF;
+        font-size: 20px;
+    }
+    
+    .header-area .main .main-nav .login a {
+        text-decoration: none;
+        color: #4BA3EF;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .header-area .main .main-nav .login {
+        width: 100px;
+        height: 36px;
+    }
+    
+    #cart {
+        position: absolute;
+        width: 800px;
+        background-color: white;
+        top: 100px;
+        left: 30px;
+    }
+    
+    #cart h2 {
+        text-align: center;
+        color: #4BA3EF;
+    }
+    
+    .center {
+        position: absolute;
+        width: 800px;
+        height: 500px;
+        background-color: white;
+        top: 180px;
+        left: 30px;
+    }
+    
+    .center .cart-details img {
+        position: absolute;
+        left: -150px;
+        top: 10px;
+    }
+    
+    .center .cart-details {
+        position: absolute;
+        left: 200px;
+        top: 20px;
+    }
+    
+    .center .cart-details .text {
+        font-size: 20px;
+    }
+    
+    .center .cart-details .price {
+        margin-top: 25px;
+        font-size: 22px;
+    }
+    
+    .center .cart-details .price span {
+        text-decoration: line-through;
+        color: rgb(128, 125, 125);
+        margin-right: 15px;
+        font-size: 18px;
+    }
+    
+    .center .cart-details .price em {
+        color: rgb(10, 167, 10);
+        margin-left: 18px;
+        font-size: 19px;
+    }
+    
+    .center .cart-details .plus {
+        display: flex;
+        margin-top: 35px;
+        font-size: 22px;
+    }
+    
+    .center .cart-details .plus button {
+        position: absolute;
+        left: 200px;
+        border: none;
+        font-size: 18px;
+        color: black;
+    }
+    
+    .center .cart-details .plus button:hover {
+        color: rgb(23, 105, 228);
+        transition: .3;
+    }
+    
+    .center .cart-details .plus .quantity {
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+    
+    .price-details {
+        position: absolute;
+        right: 10px;
+        background-color: white;
+        top: 100px;
+        width: 500px;
+        height: 400px;
+    }
+    
+    .price-details h3 {
+        text-align: center;
+        color: rgb(128, 125, 125);
+    }
+    
+    .price-details .price {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .price-details .price span {
+        position: absolute;
+        right: 70px;
+    }
+    
+    .price-details .discount {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+    
+    .price-details .discount span {
+        position: absolute;
+        right: 70px;
+        color: rgb(10, 167, 10);
+    }
+    
+    .price-details .d-charges {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+    
+    .price-details .d-charges span {
+        position: absolute;
+        right: 70px;
+        color: rgb(10, 167, 10);
+    }
+    
+    .price-details .total {
+        font-size: 27px;
+        font-weight: 550;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+    .price-details .total span {
+        position: absolute;
+        right: 70px;
+    }
+    
+    .price-details .save {
+        color: rgb(10, 167, 10);
+        margin-top: 80px;
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 550;
+    }
+    
+    .center .cart-details .continue {
+        position: absolute;
+        top: 400px;
+        right: -150px;
+        width: 250px;
+        height: 50px;
+        background-color: rgb(255, 153, 0);
+        border: none;
+        color: white;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <header class="header-area">
+        <div class="main">
+            <nav class="main-nav">
+                <div>
+                    <h2 class="logo"><a href="#">SHOPSY
+                        <em>CART</em></a></h2>
+                </div>
+                <form>
+                    <input type="text" placeholder="Search for products,brands and more">
+                    <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar">
+                    <li><a href="#">Become a Seller</a></li>
+                    <li><a href="#"><i class="bi bi-heart-fill"></i></a></li>
+                </ul>
+        </div>
+        </nav>
+    </header>
+    <div class="cart" id="cart">
+        <h2>Your Cart</h2>
+    </div>
+    <div class="center">
+        <div class="cart-details" id="cart-detail">
+            <div class="text " id="tex">Fastrack Analog Watch For Men & Women</div>
+            <div class="price"><span>₹890</span>₹787<em>10% off</em></div>
+            <div id="plus" class="plus">
+                <i class="bi bi-dash-lg" onclick="decrement()"></i>
+                <div id="quantity" class="quantity">1</div>
+                <i class="bi bi-plus-lg" onclick="increment()"></i>
+
+                <button onclick="Delete()">REMOVE</button>
+            </div>
+            <img src="images/w1_1.webp" alt="">
+            <button class="continue">CONTINUE</button>
+        </div>
+
+    </div>
+    <div class="price-details">
+
+        <h3>PRICE DETAILS</h3>
+        <hr>
+        <div id="price">
+            <div class="price">
+                Price<span>₹890</span>
+            </div>
+            <div class="discount">Discount<span>-₹103</span></div>
+            <div class="d-charges">Delivery Charges<span>FREE</span></div>
+            <hr>
+            <div class="total">Total amount
+                <div id="total"><span>₹787</span></div>
+            </div>
+            <div class="save">You will save ₹103 on this order</div>
+        </div>
+    </div>
+    <script>
+        let increment = () => {
+            let incre = document.getElementById("quantity").innerHTML;
+            document.getElementById("quantity").innerHTML++;
+
+
+        }
+        let decrement = () => {
+            let decre = document.getElementById("quantity").innerHTML;
+            if (decre > 1) {
+                document.getElementById("quantity").innerHTML--;
+            }
+        }
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
